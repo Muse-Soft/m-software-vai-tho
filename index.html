@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vải Thô — Lookbook Linen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F7F3EC; --ink:#22201D; --olive:#6B7250; --card:#FFFFFF;
+    --line:#E7DFD0; --muted:#8A8D7A;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Be Vietnam Pro",sans-serif;font-size:15px;line-height:1.6}
+  h1,h2,h3{font-family:"Cormorant Garamond",serif;line-height:1.15;margin:0 0 16px}
+  h2{font-size:44px}
+  h3{font-size:28px}
+  a{color:var(--olive)}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 80px}
+  header{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:10}
+  .nav{display:flex;justify-content:space-between;align-items:center;padding:18px 80px;max-width:1200px;margin:0 auto}
+  .brand{font-family:"Cormorant Garamond",serif;font-size:32px;letter-spacing:.02em;text-decoration:none;color:var(--ink)}
+  .nav a.menu{color:var(--ink);text-decoration:none;margin-left:28px;font-size:14px}
+  section{padding:80px 0}
+  .section-title{border-bottom:2px solid var(--olive);padding-bottom:12px;margin-bottom:40px}
+  .lead{color:var(--muted);max-width:640px}
+  /* Hero: toàn bộ chiều cao màn hình đầu tiên */
+  .hero{position:relative;height:100vh;min-height:560px;padding:0;overflow:hidden}
+  .hero picture,.hero img{width:100%;height:100%;display:block;object-fit:cover}
+  .hero-text{position:absolute;left:80px;bottom:64px;background:rgba(247,243,236,.92);padding:28px 32px;max-width:480px}
+  .hero-text h1{font-size:56px}
+  .hero-text p{margin:0 0 20px;color:var(--muted)}
+  .btn{display:inline-block;background:var(--olive);color:#fff;text-decoration:none;font-weight:600;font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:14px 26px;border:none;cursor:pointer}
+  .btn.ghost{background:transparent;color:var(--olive);border:1px solid var(--olive)}
+  /* Lưới lookbook: 2 cột desktop, ảnh 3:4 */
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+  .look figure{margin:0;background:var(--card);border:1px solid var(--line)}
+  .look img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+  .look figcaption{padding:16px 18px}
+  .look figcaption strong{font-family:"Cormorant Garamond",serif;font-size:24px;display:block}
+  .look figcaption span{color:var(--muted);font-size:14px}
+  .detail{display:none;margin-top:32px;border:1px solid var(--line);background:var(--card);padding:24px;gap:28px}
+  .detail.open{display:grid;grid-template-columns:1fr 1.4fr}
+  .detail img{width:100%;aspect-ratio:3/4;object-fit:cover}
+  /* Chuyện linen: ảnh close-up 1:1 */
+  .story{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  .story img{width:100%;aspect-ratio:1/1;object-fit:cover;border:1px solid var(--line)}
+  /* Sản phẩm: tên + giá dưới ảnh, căn trái */
+  .products{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+  .product{background:var(--card);border:1px solid var(--line);padding-bottom:20px}
+  .product img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+  .product .info{padding:16px 18px 0}
+  .product h3{font-size:24px;margin-bottom:4px}
+  .price{margin:4px 0 14px}
+  .price s{color:var(--muted);margin-left:8px}
+  .price .sale{color:var(--olive);font-weight:600}
+  /* Phối đồ */
+  .outfits{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+  .outfits img{width:100%;aspect-ratio:3/4;object-fit:cover;border:1px solid var(--line)}
+  .outfits p{color:var(--muted)}
+  /* Form chỉ giao diện */
+  .form-box{background:var(--card);border:1px solid var(--line);padding:32px;max-width:560px}
+  .form-box input{width:100%;padding:13px 14px;border:1px solid var(--line);font-family:inherit;font-size:15px;margin:8px 0 16px}
+  .form-box input::placeholder{color:var(--muted)}
+  #form-ok{display:none;color:var(--olive);font-weight:600;margin-top:12px}
+  .contact{background:var(--line);border-top:1px solid var(--line)}
+  footer{padding:32px 80px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+  .sample-note{color:var(--muted);font-size:14px}
+  @media (max-width:768px){
+    .wrap,.nav,footer{padding-left:24px;padding-right:24px}
+    section{padding:48px 0}
+    h2{font-size:30px}
+    .grid2,.story,.products,.outfits,.detail.open{grid-template-columns:1fr}
+    .hero-text{left:24px;right:24px;bottom:32px}
+    .hero-text h1{font-size:32px}
+    .nav a.menu{display:none}
+  }
+</style>
+</head>
+<body>
+<header>
+  <nav class="nav">
+    <a class="brand" href="#">Vải Thô</a>
+    <div>
+      <a class="menu" href="#bo-suu-tap">Bộ sưu tập</a>
+      <a class="menu" href="#cau-chuyen">Câu chuyện</a>
+      <a class="menu" href="#san-pham">Sản phẩm</a>
+      <a class="menu" href="#phoi-do">Phối đồ</a>
+      <a class="menu" href="#lien-he">Liên hệ</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero" aria-label="Hero">
+  <picture>
+    <source media="(max-width: 768px)" srcset="https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=900&h=1200&auto=format&fit=crop">
+    <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=1920&h=1080&auto=format&fit=crop" alt="Người mẫu mặc đầm linen trắng ngà">
+  </picture>
+  <div class="hero-text">
+    <h1>Bộ sưu tập mới — Linen thở cùng bạn</h1>
+    <p>Chất vải thô mộc, phom dáng nhẹ tênh, may cho những ngày nắng dịu. Ảnh mẫu minh họa.</p>
+    <a class="btn" href="#bo-suu-tap">Xem bộ sưu tập</a>
+  </div>
+</section>
+
+<main>
+<section id="bo-suu-tap">
+  <div class="wrap">
+    <h2 class="section-title">Bộ sưu tập mới</h2>
+    <p class="lead">Sáu khung hình, một tinh thần: nền sáng, ánh sáng tự nhiên, mỗi khung chỉ một chủ thể. Bấm “Xem chi tiết” để đọc thêm về từng mẫu.</p>
+    <div class="grid2 look" style="margin-top:32px">
+      <figure>
+        <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?q=80&w=900&h=1200&auto=format&fit=crop" alt="Đầm linen trắng ngà dáng suông">
+        <figcaption><strong>Đầm Suông Trắng Ngà</strong><span>Linen 100% · phom suông, tay lỡ</span><br><button class="btn ghost" style="margin-top:12px" onclick="showDetail('Đầm Suông Trắng Ngà','Linen trắng ngà dệt thô, nhẹ và thoáng. Phom suông che khuyết điểm, mặc được cả đi làm lẫn đi chơi.','https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?q=80&w=900&h=1200&auto=format&fit=crop')">Xem chi tiết</button></figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=900&h=1200&auto=format&fit=crop" alt="Áo sơ mi linen màu be">
+        <figcaption><strong>Sơ Mi Be Mộc</strong><span>Linen be nhạt · cổ đứng, tay dài xắn nhẹ</span><br><button class="btn ghost" style="margin-top:12px" onclick="showDetail('Sơ Mi Be Mộc','Áo sơ mi linen be nhạt, đường may lộ chỉ mộc. Dễ phối với quần ống rộng hoặc chân váy dài.','https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=900&h=1200&auto=format&fit=crop')">Xem chi tiết</button></figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=900&h=1200&auto=format&fit=crop" alt="Váy linen dáng dài ngoài trời nắng">
+        <figcaption><strong>Váy Dài Nắng Sớm</strong><span>Linen olive nhạt · dáng dài, eo chun sau</span><br><button class="btn ghost" style="margin-top:12px" onclick="showDetail('Váy Dài Nắng Sớm','Váy dài olive nhạt, chất vải rủ nhẹ, hợp dạo phố buổi sáng và những chuyến đi biển.','https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=900&h=1200&auto=format&fit=crop')">Xem chi tiết</button></figcaption>
+      </figure>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=900&h=1200&auto=format&fit=crop" alt="Set đồ linen trắng">
+        <figcaption><strong>Set Trắng Tinh Khôi</strong><span>Áo + quần linen trắng · phom rộng thoải mái</span><br><button class="btn ghost" style="margin-top:12px" onclick="showDetail('Set Trắng Tinh Khôi','Set áo quần linen trắng, phom rộng, mặc mát cả ngày dài. Phối thêm sandal da là đủ.','https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=900&h=1200&auto=format&fit=crop')">Xem chi tiết</button></figcaption>
+      </figure>
+    </div>
+    <div id="detail" class="detail">
+      <img id="detail-img" src="" alt="">
+      <div><h3 id="detail-title"></h3><p id="detail-text"></p><a class="btn" href="#lien-he">Hỏi mua</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="cau-chuyen">
+  <div class="wrap">
+    <h2 class="section-title">Câu chuyện chất liệu linen</h2>
+    <div class="story">
+      <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?q=80&w=1000&h=1000&auto=format&fit=crop" alt="Cận cảnh thớ vải linen">
+      <div>
+        <p>Linen làm từ sợi lanh — càng giặt càng mềm, càng mặc càng vừa người. Vải thô thoáng khí, hút ẩm tốt, hợp khí hậu nóng ẩm.</p>
+        <p>Vải Thô chọn linen dệt thô, giữ nguyên thớ vải và màu nhuộm tự nhiên: trắng ngà, be, olive nhạt. Không ủi phẳng quá mức — nếp nhăn nhẹ là một phần của chất vải.</p>
+        <p class="sample-note">Ảnh cận cảnh chất vải là ảnh mẫu minh họa.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="san-pham">
+  <div class="wrap">
+    <h2 class="section-title">6 sản phẩm nổi bật</h2>
+    <p class="lead">Giá dưới đây là giá mẫu. Bấm “Hỏi mua” để xuống mục liên hệ — cửa hàng chưa có giỏ hàng trực tuyến.</p>
+    <div class="products" style="margin-top:32px">
+      <article class="product"><img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?q=80&w=900&h=1200&auto=format&fit=crop" alt="Đầm Suông Trắng Ngà"><div class="info"><h3>Đầm Suông Trắng Ngà</h3><p class="price">1.250.000đ <span class="sale">990.000đ</span></p><a class="btn" href="#lien-he">Hỏi mua</a></div></article>
+      <article class="product"><img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=900&h=1200&auto=format&fit=crop" alt="Sơ Mi Be Mộc"><div class="info"><h3>Sơ Mi Be Mộc</h3><p class="price">890.000đ</p><a class="btn" href="#lien-he">Hỏi mua</a></div></article>
+      <article class="product"><img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=900&h=1200&auto=format&fit=crop" alt="Váy Dài Nắng Sớm"><div class="info"><h3>Váy Dài Nắng Sớm</h3><p class="price">1.450.000đ</p><a class="btn" href="#lien-he">Hỏi mua</a></div></article>
+      <article class="product"><img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=900&h=1200&auto=format&fit=crop" alt="Đầm Hoa Nhí"><div class="info"><h3>Đầm Hoa Nhí</h3><p class="price">1.190.000đ <span class="sale">990.000đ</span></p><a class="btn" href="#lien-he">Hỏi mua</a></div></article>
+      <article class="product"><img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=900&h=1200&auto=format&fit=crop" alt="Quần Ống Rộng"><div class="info"><h3>Quần Ống Rộng Be</h3><p class="price">790.000đ</p><a class="btn" href="#lien-he">Hỏi mua</a></div></article>
+      <article class="product"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=900&h=1200&auto=format&fit=crop" alt="Áo Khoác Linen"><div class="info"><h3>Áo Khoác Linen Nhẹ</h3><p class="price">1.090.000đ</p><a class="btn" href="#lien-he">Hỏi mua</a></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="phoi-do">
+  <div class="wrap">
+    <h2 class="section-title">Cảm hứng phối đồ</h2>
+    <div class="outfits">
+      <div><img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=900&h=1200&auto=format&fit=crop" alt="Đi làm: sơ mi linen + quần ống rộng"><h3>Đi làm</h3><p>Sơ mi be + quần ống rộng, thêm túi cói và sandal da.</p></div>
+      <div><img src="https://images.unsplash.com/photo-1495385794356-15371f348c31?q=80&w=900&h=1200&auto=format&fit=crop" alt="Dạo phố: đầm linen + mũ rộng vành"><h3>Dạo phố</h3><p>Đầm suông + mũ rộng vành, nhẹ nhàng mà vẫn nổi bật.</p></div>
+      <div><img src="https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?q=80&w=900&h=1200&auto=format&fit=crop" alt="Đi biển: set linen trắng"><h3>Đi biển</h3><p>Set trắng khoác ngoài đồ bơi, xỏ dép lê là xong.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="dang-ky">
+  <div class="wrap">
+    <h2 class="section-title">Đăng ký nhận tin</h2>
+    <p class="lead">Nhận tin bộ sưu tập mới và đợt giảm giá. Form này chỉ là giao diện — chưa gửi dữ liệu đi đâu.</p>
+    <form class="form-box" style="margin-top:24px" onsubmit="event.preventDefault();document.getElementById('form-ok').style.display='block';">
+      <label for="email">Email của bạn</label>
+      <input id="email" type="email" placeholder="ban@example.com" required>
+      <button class="btn" type="submit">Đăng ký</button>
+      <p id="form-ok">Cảm ơn bạn đã đăng ký! (Bản giao diện — chưa lưu dữ liệu thật.)</p>
+    </form>
+  </div>
+</section>
+
+<section id="lien-he" class="contact">
+  <div class="wrap">
+    <h2 class="section-title">Liên hệ</h2>
+    <p><strong>Cửa hàng Vải Thô</strong><br>Địa chỉ: [CẦN BỔ SUNG — địa chỉ cửa hàng placeholder]<br>Giờ mở cửa: 9:00 – 21:00 hằng ngày<br>Nhắn tin cho cửa hàng để hỏi mua sản phẩm — chưa có giỏ hàng trực tuyến.</p>
+    <p class="sample-note">Toàn bộ ảnh trên trang này là ảnh mẫu minh họa (Unsplash), đồng tông sáng tự nhiên, ảnh người mẫu tỉ lệ dọc 3:4, hero 16:9 desktop / 3:4 mobile, ảnh cận cảnh chất vải 1:1 — theo DESIGN.md.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div>Vải Thô — Lookbook linen · Dựng theo DESIGN.md (TEC-143) · Ảnh mẫu minh họa, chưa phải ảnh sản phẩm thật.</div>
+</footer>
+
+<script>
+function showDetail(title, text, img){
+  var d = document.getElementById('detail');
+  document.getElementById('detail-title').textContent = title;
+  document.getElementById('detail-text').textContent = text;
+  var im = document.getElementById('detail-img');
+  im.src = img; im.alt = title;
+  d.classList.add('open');
+  d.scrollIntoView({behavior:'smooth', block:'center'});
+}
+</script>
+</body>
+</html>
